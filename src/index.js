@@ -95,7 +95,7 @@ class ReactFlagsSelect extends Component {
 				<div ref="selectedFlag" style={{fontSize: `${selectedSize}px`}} className={`selected--flag--option ${this.props.disabled ? 'no--focus' : ''}`} onClick={this.toggleOptions}>
 					{isSelected &&
 						<span className="country-flag" style={{width: `${selectedSize}px`, height: `${selectedSize}px`}} >
-							<img src={require(`../flags/${isSelected.toLowerCase()}.svg`)} />
+							<img src={`../flags/${isSelected.toLowerCase()}.svg`} />
 							{this.props.showSelectedLabel &&
 								<span className="country-label">{ this.props.customLabels[isSelected] || countries[isSelected] }</span>
 							}
@@ -119,7 +119,7 @@ class ReactFlagsSelect extends Component {
 
 							<div className={`flag-option ${this.props.showOptionLabel ? 'has-label' : ''}`} key={countryCode} onClick={() => this.onSelect(countryCode)}>
 								<span className="country-flag" style={{width: `${optionsSize}px`, height: `${optionsSize}px`}} >
-									<img src={require(`../flags/${countryCode.toLowerCase()}.svg`)} />
+									<img src={`../flags/${countryCode.toLowerCase()}.svg`} />
 									{this.props.showOptionLabel &&
 										<span className="country-label">{ this.props.customLabels[countryCode] || countries[countryCode] }</span>
 									}
